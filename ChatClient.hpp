@@ -9,10 +9,10 @@
 #include "Message.hpp"
 #include "Window.hpp"
 
-using namespace std;
-
 #define TCP_PORT 8080
 #define UDP_PORT 8888
+
+using namespace std;
 
 class ChatClient;
 
