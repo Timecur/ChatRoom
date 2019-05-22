@@ -247,11 +247,8 @@ public:
         }
     }
 
-
     bool Logout()
-    {
-
-    }
+    {}
 
     ~ChatClient()
     {}
