@@ -44,11 +44,13 @@ class ChatServer{
         {}
         void InitServer()
         {
+            // 绑定TCP、UDP套接字
             tcp_listen_sock = SocketApi::Socket(SOCK_STREAM);
             udp_work_sock = SocketApi::Socket(SOCK_DGRAM);
             SocketApi::Bind(tcp_listen_sock, tcp_port);
             SocketApi::Bind(udp_work_sock, udp_port);
-
+            
+            // 设置监听套接字
             SocketApi::Listen(tcp_listen_sock);
         }
         unsigned int RegisterUser(const std::string &name,\
