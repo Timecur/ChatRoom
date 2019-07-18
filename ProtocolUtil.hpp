@@ -16,6 +16,7 @@
 #define BACKLOG 5
 #define MESSAGE_SIZE 1024
 
+// 协议格式
 class Request{
     public:
         std::string method; //REGISTER, lOGIN, lOGOUT
