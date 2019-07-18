@@ -41,6 +41,7 @@ int main(int argc, char* argv[])
     ChatServer *sp = new ChatServer(tcp_port, udp_port);
     sp->InitServer();
 
+    // 创建两个线程分别：放数据 取数据
     pthread_t c, p;
     pthread_create(&p, NULL, RunProduct, (void*) sp);
     pthread_create(&c, NULL, RunConsume, (void*) sp);
